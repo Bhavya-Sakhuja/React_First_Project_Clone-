@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-Project-01</title>
+    <link rel="shortcut icon" href="vite.svg" type="image/x-icon">
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            width:100vw;
+            background-color: #242424;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .first{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top:7rem;
+            gap:2.5rem;
+            flex-wrap: wrap;
+        }
+        #vite{
+            width:100px;
+            height:100px;
+        }
+        #vite:hover{
+            filter: drop-shadow(0 0 2em #646cffaa);
+            transition-duration: 1s;
+        }
+        #react{
+            width:100px;
+            height:100px;
+            animation-name : logo-spin;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+        }
+        #react:hover{
+            filter: drop-shadow(0 0 2em #61dafbaa);
+            transition-duration: 1s;
+        }
+        @keyframes logo-spin {
+        from {
+           transform: rotate(0deg);
+        }
+        to {
+           transform: rotate(360deg);
+        }
+        }
+        .content{
+            display: flex;
+            width:100%;
+            justify-content: center;
+            margin-top:3%;
+            flex-wrap: wrap;
+        }
+        .content h1{
+            font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.87)
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            margin-top:5%;
+        }
+        #click{
+            height:2%;
+            padding:1% 1%;
+            color: #f9f9f9;
+            background-color: #1a1a1a;
+            border: 1px solid transparent;
+            border-radius: 10px;
+        }
+        #click:hover{
+            border-color: #646cff;
+        }
+        #click:active{
+            border: 2.5px solid #f9f9f9;
+        }
+        .detail{
+            display: flex;
+            justify-content: center;
+            color:#f9f9f9;
+            margin:2%
+        }
+        .doc{
+            display: flex;
+            justify-content: center;
+            color:#f9f9f9;
+            margin:3%;
+        }
+        .doc h4{
+            font-size:1.1rem;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <a href="https://vite.dev/" target="_blank">
+        <img src="vite.svg" id="vite" >
+        </a>
+        <a href="https://react.dev/" target="_blank">
+        <img src="react.svg" id="react">
+        </a>
+    </div>
+    <div class="content">
+        <h1>Vite + React</h1>
+    </div>
+    <div class="button">
+        <button id="click"></button>
+    </div>
+    <div class="detail">
+        <h4>Edit src/App.jsx and save to test HMR</h4>
+    </div>
+    <div class="doc">
+        <h4>Click on the Vite and React logos to learn more</h4>
+    </div>
+</body>
+<script>
+    let count = 0;
+    let count_button = document.querySelector('#click')
+    count_button.textContent =  "count is " + count
+    
+    count_button.addEventListener('click',() => {
+        count += 1;
+        count_button.textContent = "count is " + count;
+    })
+</script>
+</html>
